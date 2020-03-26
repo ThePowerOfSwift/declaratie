@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FeedKit",
+        "repositoryURL": "https://github.com/nmdias/FeedKit.git",
+        "state": {
+          "branch": null,
+          "revision": "a74fcfbfb2dc54f1f8fa3c6848ae1efe697e0ebf",
+          "version": "9.0.0"
+        }
+      },
+      {
+        "package": "SwiftSignatureView",
+        "repositoryURL": "https://github.com/alankarmisra/SwiftSignatureView.git",
+        "state": {
+          "branch": "master",
+          "revision": "2f9db7c9969731b2ea3f9da8b563dd9baab549d1",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Statement" representedClassName="Statement" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="address2" optional="YES" attributeType="String"/>
+        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="region" optional="YES" attributeType="String"/>
+        <relationship name="destinations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StatementDestination" inverseName="relationship" inverseEntity="StatementDestination"/>
+        <relationship name="reasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StatementReason" inverseName="statement" inverseEntity="StatementReason"/>
+    </entity>
+    <entity name="StatementDestination" representedClassName="StatementDestination" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Statement" inverseName="destinations" inverseEntity="Statement"/>
+    </entity>
+    <entity name="StatementReason" representedClassName="StatementReason" syncable="YES" codeGenerationType="class">
+        <attribute name="index" optional="YES" attributeType="String"/>
+        <relationship name="statement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Statement" inverseName="reasons" inverseEntity="Statement"/>
+    </entity>
+    <elements>
+        <element name="Statement" positionX="54" positionY="171" width="128" height="193"/>
+        <element name="StatementDestination" positionX="45" positionY="216" width="128" height="73"/>
+        <element name="StatementReason" positionX="27" positionY="126" width="128" height="73"/>
+    </elements>
+</model>
